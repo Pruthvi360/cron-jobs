@@ -1,0 +1,27 @@
+STEPS TO PERFORM CRON JOBS.
+
+STEP 1: 
+lsb_release -a             > check version of ubuntu
+systemctl status cron      > check the cron running in background.
+
+crontab -e                 > to edit cron jobs
+
+select an editor. To change later, run 'select-editor'
+1. /bin/nano
+2. /usr/bin/vim.tiny
+3. /bin/ed
+
+choose nano                 > 1
+crontab -u root -e          > to edit cron jobs
+
+15 15 12 7 2 /bin/sh /home/pruthvi/pruthvi.sh
+15 24 31 7 2 /usr/bin/echo "Hi Guys Thank you for watching video, Please do Like and Subscribe"  >> /home/pruthvi/pruthvi.txt
+
+NOTE: 
+@hourly     > Every hour
+@daily      > Every day
+@monthly    > Every Month
+
+*            > Any day
+
+MIN (1-60), HOUR (1-24), DAY OF THE MONTH (1-31), MONTH (1-12), DAY OF WEEK (1-7)
